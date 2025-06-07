@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+.v-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+    z-index: 2;
+}
+
+.fullscreen-video-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.fullscreen-video-wrap video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%; /* Розтягуємо по ширині */
+    height: 100%; /* Висота буде автоматично пропорційно змінюватись */
+    transform: translate(-50%, -50%);
+    object-fit: cover; /* Не залишатимемо чорні поля по боках */
+}
+
+
+.header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.header-content {
+    z-index: 2;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Кнопка буде внизу */
+    align-items: center;
+    padding-bottom: 2rem; /* Відступ від низу */
+}
+.btn {
+    display: inline-block;
+    position: absolute;
+    color: #ff9cbd;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.button {
+    display: flex;
+    justify-content: space-between; /* Вирівнювання елементів по краях */ 
+    align-items: end; 
+    margin-top: auto;
+    width: var(--logo-width);
+    position: relative;
+    z-index: 20;
+}

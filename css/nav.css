@@ -1,27 +1,28 @@
 nav {
-    /* background: var(--bg-nav-1); */
-    background: transparent; /* Колір фону навігаційної панелі 1 */
-    background-repeat: no-repeat;
-    background-position: bottom;
-    position: relative;
-    width: 100%;
-    z-index: 95;
+    /* background-color: var(--bg-nav-2); */
+    background-color: transparent;
+    /* backdrop-filter: blur(16px); */
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+    position: absolute; /* Абсолютне позиціювання, щоб навігація не порушувала потокову структуру */
+    top: 0; /* Розташовуємо навігацію зверху */
+    right : 0; /* Зліва */
+    width: 100%; /* Ширина на весь екран */
+    z-index: 9999;/* Встановлюємо високий z-index, щоб навігація була поверх відео */
 }
 
 nav.topfixed {
-    background: var(--bg-nav-1);
+    background-color: #000;
     position: fixed;
 }
 
-/* nav::before {
-    content: '';
-    display: block;
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Вирівнювання елементів по краях */
+    align-items: center;
     width: 100%;
-    height: 100%;
-    position: absolute;
-    transform: translateY(-100%);
-    transition: transform .1s ease;
-} */
+    position: relative;
+    z-index: 20;
+}
 
 nav.topfixed::before {
     transform: none;
@@ -33,8 +34,8 @@ nav.topfixed::before {
     align-items: center;                /* Схема вирівнювання лого та меню (desktop) по додатковій осі (cross axis) */
     margin-left: auto;                  /* Центрування блоку всередині nav по-горизонталі */
     margin-right: auto;                 /* Центрування блоку всередині nav по-горизонталі */
-    max-width: var(--max-width);        /* Ширина .nav-inside не більше 1280px */
-    padding: var(--mob-padding);        /* Внутрішні відступи */
+    /* max-width: var(--max-width);*/        /* Ширина .nav-inside не більше 1280px */
+/*padding: var(--mob-padding);        /* Внутрішні відступи */
     position: relative;
     transition: all .3s ease-in-out;
 }
@@ -47,12 +48,14 @@ nav.topfixed::before {
     /* background-color: rgba(10,10,10,.5); */
     /* background-blend-mode: multiply; */
     /* background-size: cover; */
-    padding-top: 12px;      /* Внутрішні відступи після прокрутки */
-    padding-bottom: 12px;   /* Внутрішні відступи після прокрутки */
+    padding-top: 5px;/* Внутрішні відступи після прокрутки */
+    padding-bottom: 5px; /* Внутрішні відступи після прокрутки */
 }
 
 .logo {
     display: flex;
+    justify-content: center; /* Центруємо логотип всередині */
+    align-items: center;
     width: var(--logo-width);
     line-height: .7;
     transform: scale(1);
@@ -60,11 +63,16 @@ nav.topfixed::before {
     align-items: center;    /* Вирівнювання по додатковій осі */
     transition: all .3s ease-in-out;
     text-decoration: none;
+    z-index: 21; /* Логотип накриває все інше */
+    padding: 0.5rem;
+    margin: auto;
 }
 
 .logo img {
-    max-width: 50%;
+    width: 75px;
     height: auto;
+    display: block;
+    overflow: visible;
 }
 
 .logo:hover {
@@ -77,32 +85,23 @@ nav.topfixed::before {
     display: flex;
 }
 
-.logo img {
-    margin-right: 15px;
-}
-
-.logo span {
-    color: var(--logo-color-1);
-    font-size: .8rem; /* 0.85 * font-size body */
-    line-height: 1.4;
-    letter-spacing: .035em;
-    font-weight: 600;
-    text-transform: uppercase;
-    max-width: 80px;
-}
-
 nav .navbar {
     overflow: visible;
 }
 
 .nav-icon {
-    display: none;
-    z-index: 99;
-}
+     /* ТУТ — колір іконки */
+    /* position: absolute; */
+    /* height: 30px; */
+    display: flex;
+    position: relative;
+    width: 20px;
+    transition: all 0.3s ease-in-out;
+  }
 
 .navigation a {
     display: block;
-    color: var(--nav-color-1);  /* Основний колір меню */
+    color: #ffffff;  /* Основний колір меню */
     font-size: .9rem;           /* Розмір тексту меню */
     font-weight: 600;           /* Накреслення тексту меню */
     letter-spacing: .025em;
@@ -114,22 +113,22 @@ nav .navbar {
 }
 
 .navigation a:hover {
-    color: var(--nav-color-2); /* Основний колір меню (hover) */
+    color: #ffffff; /* Основний колір меню (hover) */
 }
 
 .topfixed .navigation a {
-    color: var(--nav-color-3); /* Колір меню після прокрутки */
+    color: #000; /* Колір меню після прокрутки */
 }
 
 .topfixed .navigation a:hover {
-    color: var(--nav-color-4); /* Колір меню (hover) після прокрутки */
+    color: var(--bg-nav-2); /* Колір меню (hover) після прокрутки */
 }
 
 .navigation ul {
     list-style: none;
     display: flex;
     justify-content: flex-end;
-}
+} */
 
 .navigation li {
     display: inline-block;
@@ -141,7 +140,7 @@ a:hover, a:focus, a:active {
 }
 
 .overlay {
-    background-color: #333;
+    background-color: var(--nav-color-1);
     opacity:.3;
     position: absolute;
     left:0; top:0;
@@ -149,20 +148,20 @@ a:hover, a:focus, a:active {
     height:100dvh;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 3840px) {
 
     .navbar {
         justify-content: space-between;
     }
 
     .navigation ul {
-        background-color: var(--bg-nav-2);
+        background-color: var(--bg-nav-1);
         display: flex;
         flex-direction: column;
         visibility: visible;
         justify-content: flex-start;
         align-items: flex-start;
-        width: 70vw; /* 70% from Viewport width */
+        width: 40vw; /* 70% from Viewport width */
         height: 100dvh; /* 100% Dynamic viewport height */
         position: absolute;
         right: 0;
@@ -179,17 +178,17 @@ a:hover, a:focus, a:active {
     .open ul li {
         /* display: block; */
         width: 100%;
-        border-bottom: 1px solid #444;
         margin-left: 0;
     }
 
     .open ul a {
-        color: var(--nav-color-3);  /* Основний колір мобільного меню */
+        font-size: 1.5rem;
+        color: var(--txt-color-1);  /* Основний колір мобільного меню */
         padding-top: 12px;
         padding-bottom: 12px;
     }
 
     .open ul a:hover {
-        color: var(--nav-color-4);  /* Основний колір мобільного меню (hover) */
+        color: var(--bg-nav-2);  /* Основний колір мобільного меню (hover) */
     }
 }

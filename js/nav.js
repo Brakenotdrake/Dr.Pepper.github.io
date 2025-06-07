@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", function() {
     
     let burger = document.querySelector(".nav-icon");
     let dy = 0;
@@ -51,14 +51,14 @@ document.addEventListener("DOMContentLoaded", function(){
     /* Додати функцію обробки для події 'Scroll' */
     /* При скролі вгору, якщо позиція все ще більше, ніж 60px від верхнього краю */
     /* Додавати клас '.topfixed' для елемента "nav"*/
-
     
-    window.addEventListener('scroll', function() {
+    window.addEventListener("scroll", function() {
 
         let navbox = document.querySelector("nav");
         let y = window.scrollY;
         
-        if (y < dy && y > 60) {
+        // if (y < dy && y > 60) {
+        if ( y > 60) {
             if (!navbox.classList.contains("topfixed"))
             navbox.classList.add("topfixed");
         } else {
@@ -68,6 +68,18 @@ document.addEventListener("DOMContentLoaded", function(){
         dy = y;
       });
 
-    /* Зміна класу для <nav> по скролу вгору */
-});
 
+      let faqopen = document.querySelectorAll(".faq-question");
+
+    faqopen.forEach((elem) => {
+
+        elem.addEventListener("click", (evt) => {
+            let faqitem = elem.parentElement;
+            if ( faqitem ) {                     
+                faqitem.classList.toggle("open");
+            }
+        });
+    });
+
+    /* Зміна класу для <nav> по скролу вгору */
+})

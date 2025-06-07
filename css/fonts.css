@@ -22,11 +22,11 @@
 
 @font-face {
     font-family: 'Gilroy-Regular';
-    src: url(../fonts/Gilroy-Black.eot);
-    src: url(../fonts/Gilroy-Black.otf) format('embedded-opentype'),
-         url(../fonts/Gilroy-Black.ttf) format('otf'),
-         url(../fonts/Gilroy-Black.woff) format('woff'),
-         url(../fonts/Gilroy-Black.woff2) format('woff2');
+    src: url(../fonts/Gilroy-Regular.eot);
+    src: url(../fonts/Gilroy-Regular.otf) format('embedded-opentype'),
+         url(../fonts/Gilroy-Regular.ttf) format('otf'),
+         url(../fonts/Gilroy-Regular.woff) format('woff'),
+         url(../fonts/Gilroy-Regular.woff2) format('woff2');
   }
   
 /* font-family: 'Gilroy-Regular'; */

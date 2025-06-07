@@ -11,6 +11,10 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/burger.css">
+    <link rel="stylesheet" href="css/video_bg.css">
+    <link rel="stylesheet" href="css/s1.css">
+    <link rel="stylesheet" href="css/s2.css">
+    <link rel="stylesheet" href="css/footer.css">
 
 </head>
 <body id="top">
@@ -18,8 +22,7 @@
     <nav>
         <div class="navbar">
             <a href="#top" class="logo">
-                <img src="img/logo.svg" alt="Логотип проєкту">
-                <span>Назва проєкту</span>
+                <img src="img/dr-pepper-vector-logo.svg" alt="Логотип проєкту">
             </a>
            <div class="navigation">
                 <button class="nav-icon">
@@ -29,10 +32,8 @@
                     <span></span>
                 </button>
                 <ul class="level_1">
-                    <li><a class="nav-link" href="#top">Додому</a></li>
-                    <li><a class="nav-link" href="#s1">Пункт 1</a></li>
-                    <li><a class="nav-link" href="#s2">Пункт 2</a></li>
-                    <li><a class="nav-link" href="#s3">Пункт 3</a></li>
+                    <li><a class="nav-link" href="#s1">Спробувати 23</a></li>
+                    <li><a class="nav-link" href="#s2">FAQ</a></li>
                 </ul>
            </div>
        </div>
@@ -43,36 +44,98 @@
     <div class="wrapper"> <!-- Загальний контейнер -->
 
         <!-- Start of the Header section -->
-        <header class="container">
-            <div class="inside">
-                <h1>Dr.Pepper</h1>
-                <p>Dr. Pepper — це більше, ніж напій; це легенда, створена з 23 інгредієнтів. З першим ковтком солодкі вишневі нотки зустрічаються з ваніллю і карамеллю, а пряний відтінок лакриці і мигдалю завершує смакову симфонію. Кожен ковток розкриває нову грань цього унікального міксу, роблячи його справжньою магією.</p>
+        <header class="v-header container">
+            <div class="fullscreen-video-wrap">
+                <video src="video/VIDEO.mp4" autoplay loop muted></video>
             </div>
+            <div class="header-overlay"></div>
+            <a class="button" href="#s1">
+                <img src="img/Scroll_btn.svg" alt="">
+            </a>
+
         </header>
+        
         <!-- END of the Header section -->
 
         <!-- Section #s1 -->
         <section id="s1" class="container">
-            <div class="inside">
+            <div class="product-image">
+                <img src="img/PEPPER.png" alt="Dr Pepper" />
+            </div>
+            <div class="product-info">
+                <h1>Dr.Pepper</h1>
+                <p class="sub-info">23 інгредієнти • 330 мл</p>
+                <p class="price">40<span>₴</span></p>
+                    <div class="quantity">
+                        <span>Кількість:</span>
+                        <button>-</button>
+                        <span class="count">1</span>
+                        <button>+</button>
+                    </div>
+                        <div class="description">
+                            <h2>Про Pepper</h2>
+                                <p>
+                                    Dr. Pepper — це більше, ніж напій; це легенда, створена з&nbsp;23 інгредієнтів.
+                                    З першим ковтком солодкі вишневі нотки зустрічаються з&nbsp;ваніллю і&nbsp;карамеллю,
+                                    а пряний відтінок лакриці й&nbsp;мигдалю завершує смакову симфонію. Кожен ковток
+                                    розкриває нову грань цього унікального міксу, роблячи його справжньою магією.
+                                 </p>
+                                <a class="buy" href="checkout.html">
+                                    <img src="img/Buy_btn.svg" alt="">
+                                </a>
+                        </div>
+            </div>
+        </section>
+
+        <section id="s2" class="container">
+            <div class="faq-container">
+                <h2 class="faq-title">FAQ</h2>
+            <div class="faq-item">
+                <h3 class="faq-question">Що таке Dr. Pepper?<span class="faq-icon">+</span></h3>
+                <div class="faq-txt">Dr. Pepper — це культовий газований напій із США, створений ще у 1885 році. Його смак — це мікс із 23 різних ароматів, що разом дають глибокий, незвичайний і впізнаваний профіль. Не кола. Не просто вишня. Це Dr. Pepper — і ти або вже фан, або тільки відкриваєш для себе легенду.</div>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question">Чим Dr. Pepper відрізняється від інших газованих напоїв?<span class="faq-icon">+</span></h3>
+                <div class="faq-txt">Dr. Pepper — не просто ще одна "солодка газіровка". Його фішка — унікальна формула з 23 інгредієнтів, які створюють складний, трохи пряний, трохи фруктовий смак. Це не можна переплутати з колою чи пепсі.
+Dr. Pepper — це вибір тих, хто шукає щось інше.</div>
+                 </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question">Які основні інгредієнти входять до складу Dr. Pepper?<span class="faq-icon">+</span></h3>
+                <div class="faq-txt">Dr. Pepper містить воду, цукор (або підсолоджувачі — залежно від версії), вуглекислий газ, ароматизатори (включаючи природні й штучні), карамельний колір, фосфорну кислоту та консервант (бензоат натрію).
+І головне — секретна суміш із 23 ароматів, серед яких можуть бути нотки вишні, лакриці, імбиру, сливи, кориці, ванілі та інші, але точний рецепт — строго засекречений з 1885 року.
+
+</div>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question">Чи містить Dr. Pepper кофеїн?<span class="faq-icon">+</span></h3>
+                <div class="faq-txt">Так, Dr. Pepper містить кофеїн. Його кількість — приблизно 41 мг на банку 355 мл, що трохи менше, ніж у стандартній колі. Якщо ж ти уникаєш кофеїну — існує версія Dr. Pepper Caffeine Free.
+
+</div>
+            </div>
             </div>
         </section>
         
-        <!-- Section #s2 -->
-        <section id="s2" class="container">
-            <div class="inside">
-            </div>
-        </section>
-
-        <!-- Section #s3 -->
-        <section id="s3" class="container">
-            <div class="inside">
-            </div>
-        </section>
-
         <!-- Start of the Footer section -->
         <footer class="container">
             <div class="inside">
-            </div>
+                <div class="addr">
+                    © Copyright 2025, Львів, вул. Кубійовича, 38
+                </div>
+                <div class="social">
+                    <a class="icon" href="https://www.instagram.com/drpepper/?hl=en">
+                        <img src="img/IG.svg" alt="Instgram">
+                    </a>
+                    <a class="icon" href="https://www.youtube.com/@drpepper">
+                        <img src="img/YT.svg" alt="YouTube">
+                    </a>
+                    <a class="icon" href="https://www.facebook.com/DrPepper/">
+                        <img src="img/FB.svg" alt="Facebook">
+                    </a>
+                </div>
+            </div>    
         </footer>
         <!-- END of the Footer section -->
 

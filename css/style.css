@@ -6,6 +6,9 @@ html, body {
     line-height: 1.2;       /* Міжрядковий інтервал основного тексту в %/100 */
     letter-spacing: 0em; /* Міжлітерний інтервал основного тексту збільшений на 2/1000 Em */
     scroll-behavior: smooth;/* Плавна прокрутка під час переходу за якорем (ancor) */
+    /* background-color: #f48092; */
+    background: transparent;
+    color: white;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -42,4 +45,22 @@ a:hover {
     width: 100%;
 }
 
+.img_box img {
+  display: block;
+  max-width: 100%;
+
+}
+
+.socail {
+    gap: 16px;
+}
+
+
 /* *************************************************************** */
+
+body {
+    margin: 0;
+    font-family: 'Gilroy', sans-serif;
+    /* background-color: #f48092; */
+    color: white;
+  }

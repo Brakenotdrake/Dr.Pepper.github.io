@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Оформлення замовлення</title>
+
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/checkout.css">
+    <link rel="stylesheet" href="css/burger.css">
+
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <a href="#top" class="logo">
+                <img src="img/dr-pepper-vector-logo.svg" alt="Логотип проєкту">
+            </a>
+           <div class="navigation">
+                <button class="nav-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="level_1">
+                    <li><a class="nav-link" href="#s1">Спробувати 23</a></li>
+                    <li><a class="nav-link" href="#s2">FAQ</a></li>
+                </ul>
+           </div>
+       </div>
+    </nav>
+
+  <section id="s3" class="container">
+    <div class="inside">
+        <a href="index.html" class="back-btn">← Назад</a>
+        <section id="checkout" class="container">
+            <div class="inside checkout-wrapper">
+            <div class="checkout-form">
+                <form>
+                  <h2>Контактна інформація</h2>
+                  <div class="form-group">
+                    <input class="bordered" type="text" placeholder="Прізвище" value="Іванович" />
+                    <input class="bordered" type="text" placeholder="Ім’я" value="Іван" />
+                  </div>
+                    <div class="form-phone">
+                  <input type="tel" placeholder="Номер телефону" value="+380990188501" />
+                  <input type="email" placeholder="Email" value="drpepper@gmail.com" />
+                    </div>
+                  <h2>Доставка</h2>
+                  <input type="text" placeholder="Місто" value="Львів" />
+                  <div class="radio-group">
+                    <label>
+                      <input type="radio" name="delivery" checked /> Самовивіз з Нової Пошти 
+                    </label>
+                    <label>
+                      <input type="radio" name="delivery" /> Кур'єр на вашу адресу
+                    </label>
+                  </div>
+                  <input type="text" placeholder="№1, вулиця Кубійовича, 38" />
+          
+                  <h2>Оплата</h2>
+                  <div class="radio-group">
+                    <label>
+                      <input type="radio" name="payment" checked /> Під час отримання товару
+                    </label>
+                    <label>
+                      <input type="radio" name="payment" /> Карткою
+                    </label>
+                  </div>
+                </form>
+              </div>
+              <div class="checkout-summary">
+                <div class="product-info">
+                  <img src="img/PEPPER_2.png" alt="Dr. Pepper" />
+                <div class="left_info">
+                    <h3>Dr.Pepper</h3>
+                    <div class="info_price">
+                      <div class="info_taste">
+                        <p class="taste">23 інгредієнти</p>
+                        <p class="ml">330 ml</p>
+                      </div>
+                      <strong>40₴</strong>
+                    </div>
+                </div>
+                </div>
+                <div class="quantity">
+                  <p>Кількість:</p>
+                  <div class="amount">
+                    <button>-</button>
+                    <span>1</span>
+                    <button>+</button>
+                  </div>
+                </div>
+                <div class="promocode">
+                  <input class="button" type="text" placeholder="Подарункова карта або код знижки" />
+                  <button class="apply">Застосувати</button>
+                </div>
+                <div class="totals">
+                  <div class="delivery">Доставка: <strong>79₴</strong></div>
+                  <div class="total">Загалом: <strong class="total_price">119₴</strong></div>
+                </div>
+                <a class="buy" href="checkout.html">
+                  <img src="img/Buy_btn.svg" alt="">
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <script src="js/nav.js"></script>
+</body>
+</html>
